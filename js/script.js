@@ -1,10 +1,17 @@
-for (let i = 0; i < 6; i++) {
+const map = [
+    "TTTTTTA",
+    "TTTTTTV",
+    "TTTTTTT",
+    "TTTTTTT",
+    "TTTTTTT",
+    "TTTTTTT",
+];
 
-    console.log(' i ' + i)
-
-    for (let a = 0; a < 7; a++) {
-        console.log(' a ' + a)
+// cria parede caminho, entrada e saida com divs
+for (let i = 0; i < map.length; i++) {
+    for (let a = 0; a < map[i].length; a++) {
+        var torre = document.createElement('div');
+        torre.setAttribute("id", map[i][a]);
+        document.getElementById('lab').appendChild(torre);
     }
-
-
 }

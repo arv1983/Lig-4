@@ -1,0 +1,39 @@
+body {
+    align-self: start;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+
+#T {
+    width: 10vw;
+    height: 10vw;
+    background: rgb(255, 255, 255);
+    border: 0.5vw solid rgb(0, 17, 255);
+}
+
+#V {
+    width: 10vw;
+    height: 10vw;
+    background: red;
+    border: 0.5vw solid rgb(0, 17, 255);
+}
+
+#A {
+    width: 10vw;
+    height: 10vw;
+    background: black;
+    border: 0.5vw solid rgb(0, 17, 255);
+}
+
+#lab {
+    /* fundo da tabela */
+    display: flex;
+    flex-direction: row;
+    width: 77vw;
+    background-color: blanchedalmond;
+    flex-wrap: wrap;
+    background-color: darkgrey;
+    margin: 0px auto;
+    align-items: center;
+}
