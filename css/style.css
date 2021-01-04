@@ -5,25 +5,33 @@ body {
     margin: auto;
 }
 
-#T {
-    width: 10vw;
-    height: 10vw;
-    background: rgb(255, 255, 255);
-    border: 0.5vw solid rgb(0, 17, 255);
-}
-
+#T,
 #V {
-    width: 10vw;
-    height: 10vw;
-    background: red;
-    border: 0.5vw solid rgb(0, 17, 255);
+    width: 9vw;
+    height: 9vw;
+    background: rgb(255, 255, 255);
+    margin: 0.5vw;
+    border: 0.5vw solid white;
 }
 
 #A {
-    width: 10vw;
-    height: 10vw;
-    background: black;
-    border: 0.5vw solid rgb(0, 17, 255);
+    width: 9vw;
+    height: 9vw;
+    background: rgb(255, 255, 255);
+    margin: 0.5vw;
+    border: 0.5vw solid rgb(38, 226, 0);
+    border-radius: 100%;
+}
+
+.bola_vermelha {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 100%;
+    border: 0.5vw solid rgb(61, 158, 16);
+}
+
+.bola {
+    background-color: tomato;
 }
 
 #lab {
@@ -31,9 +39,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 77vw;
-    background-color: blanchedalmond;
     flex-wrap: wrap;
-    background-color: darkgrey;
+    background-color: rgb(0, 255, 0);
     margin: 0px auto;
     align-items: center;
 }
