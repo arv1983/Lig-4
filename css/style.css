@@ -5,13 +5,23 @@ body {
     margin: auto;
 }
 
-.T,
+.T {
+    width: 9vw;
+    height: 9vw;
+    background: rgb(255, 255, 255);
+    margin: 0.5vw;
+    border: 0.5vw solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
 .V {
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
     margin: 0.5vw;
-    border: 0.5vw solid white;
+    border: 0.5vw solid rgb(255, 0, 0);
+    background-image: linear-gradient(to bottom right, red, rgb(153, 153, 0));
+    border-radius: 100%;
 }
 
 .A {
@@ -19,12 +29,9 @@ body {
     height: 9vw;
     background: rgb(255, 255, 255);
     margin: 0.5vw;
-    border: 0.5vw solid rgb(38, 226, 0);
+    border: 0.5vw solid rgb(0, 0, 255);
+    background-image: linear-gradient(to bottom right, blue, rgb(153, 153, 0));
     border-radius: 100%;
-}
-
-.a {
-    color: coral;
 }
 
 .bola_vermelha {
@@ -44,7 +51,9 @@ body {
     flex-direction: row;
     width: 77vw;
     flex-wrap: wrap;
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(167, 167, 167);
     margin: 0px auto;
     align-items: center;
+    border: 3px solid black;
+    border-radius: 3%;
 }
