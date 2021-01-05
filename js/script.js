@@ -120,62 +120,66 @@ function cria_jogo() {
             document.getElementById('lab').appendChild(torre).onclick = function() {
 
 
+                if (map[0][a] != 'T') {
+                    console.log('ta cheio')
 
-
-
-                par_ou_impar += 1;
-
-
-
-
-                if (par_ou_impar % 2 == 0) {
-                    jogador = 'A';
                 } else {
-                    jogador = 'V';
-                }
 
-                ////// funcao mmanipula array
-                //////////////// consertar erro...
 
-                for (let i = 0; i < 6; i++) {
+                    par_ou_impar += 1;
 
 
 
-                    console.log(map[i][a])
 
-
-
-                    if (map[i][a] != 'T') {
-                        map[i - 1][a] = jogador;
-
-                        break;
-                    }
-                    if (i == 5) {
-                        map[i][a] = jogador;
-
+                    if (par_ou_impar % 2 == 0) {
+                        jogador = 'A';
+                    } else {
+                        jogador = 'V';
                     }
 
+                    ////// funcao mmanipula array
+                    //////////////// consertar erro...
+
+                    for (let i = 0; i < 6; i++) {
+
+
+
+                        console.log(map[i][a])
+
+
+
+                        if (map[i][a] != 'T') {
+                            map[i - 1][a] = jogador;
+
+                            break;
+                        }
+                        if (i == 5) {
+                            map[i][a] = jogador;
+
+                        }
+
+
+                    }
+
+
+
+
+                    document.getElementById("lab").remove();
+
+
+
+                    var divNova = document.createElement("div");
+                    divNova.setAttribute("id", 'lab');
+
+                    document.body.appendChild(divNova)
+
+                    //recria
+                    cria_jogo(map);
+                    verifica_ganhador();
 
                 }
-
-
-
-
-                document.getElementById("lab").remove();
-
-
-
-                var divNova = document.createElement("div");
-                divNova.setAttribute("id", 'lab');
-
-                document.body.appendChild(divNova)
-
-                //recria
-                cria_jogo(map);
-                verifica_ganhador();
-
-
             };
+
         }
     }
 }
