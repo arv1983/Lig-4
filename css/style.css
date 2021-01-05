@@ -5,8 +5,8 @@ body {
     margin: auto;
 }
 
-#T,
-#V {
+.T,
+.V {
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
@@ -14,13 +14,17 @@ body {
     border: 0.5vw solid white;
 }
 
-#A {
+.A {
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
     margin: 0.5vw;
     border: 0.5vw solid rgb(38, 226, 0);
     border-radius: 100%;
+}
+
+.a {
+    color: coral;
 }
 
 .bola_vermelha {
