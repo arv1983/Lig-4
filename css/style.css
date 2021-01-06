@@ -70,9 +70,9 @@ body {
     flex-wrap: wrap;
 
     
-background-color: rgb(114, 114, 114);
-background-image: url("../img/BackGroundTabuleiro.jpg");
-background-size: 138%;
+    background-color: rgb(114, 114, 114);
+    background-image: url("../img/BackGroundTabuleiro.jpg");
+    background-size: 138%;
 
     margin: 0px auto;
     align-items: center;
