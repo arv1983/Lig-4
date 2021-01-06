@@ -1,4 +1,4 @@
-const map = [
+let map = [
     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
@@ -13,15 +13,41 @@ let map2 = map;
 
 
 
-function exibir_ganhador(x, map2) {
+function exibir_ganhador(vencedor) {
 
-    alert(x);
+
+
+    const map2 = [
+        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+        ['T', 'T', 'T', 'T', 'T', 'T', 'T']
+    ];
+
+    map = map2;
+
     document.getElementById("lab").remove();
+
+
+
     var divNova = document.createElement("div");
     divNova.setAttribute("id", 'lab');
-    document.body.appendChild(divNova);
-    cria_jogo(map2);
-    console.log(map2);
+
+    document.body.appendChild(divNova)
+
+
+    console.log(map2)
+
+
+
+
+    alert(vencedor)
+
+    console.log(map2)
+
+    cria_jogo(map2)
 
 }
 
@@ -113,7 +139,7 @@ cria_jogo(map);
 let par_ou_impar = 0;
 let jogador = 0;
 
-function cria_jogo() {
+function cria_jogo(map) {
     for (let i = 0; i < map.length; i++) {
 
         for (let a = 0; a < map[i].length; a++) {
