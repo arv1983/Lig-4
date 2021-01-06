@@ -56,15 +56,15 @@ function exibir_ganhador(vencedor) {
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
 
-    divResultado.style.width = '77vw'
+    divResultado.style.width = '100%'
     divResultado.style.height = '77vw'
-    divResultado.style.backgroundColor = 'black'
+    divResultado.style.backgroundColor = 'black 0.3'
     divResultado.style.marginTop = '-77vw'
     divResultado.style.position = 'absolute'
     divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
     document.body.appendChild(divResultado);
 
-    document.getElementById('resultado_div').onclick = function() {
+    document.getElementById('resultado_div').onclick = function () {
 
         document.getElementById("lab").remove();
         document.getElementById("resultado_div").remove();
@@ -195,7 +195,7 @@ function cria_jogo(map) {
 
             torre.setAttribute("class", map[i][a]);
 
-            document.getElementById('lab').appendChild(torre).onclick = function() {
+            document.getElementById('lab').appendChild(torre).onclick = function () {
 
                 console.log('map atual' + map[0][a] + ' A= ' + a)
                 if (map[0][a] != 'T') {
