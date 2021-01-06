@@ -43,14 +43,13 @@ let currentPlayer = "player1";
 
 function selector(e) {
 
+
+
     let alvo = e.currentTarget;
     let numberOfChildren = alvo.children.length
 
     for (i = 6; i >= 0; i--) {
-        if (alvo.children[i] == undefined) {
-            console.log("Deu undefined")
-        } else if (alvo.children[i].getAttribute("id") == "T") {
-            console.log("Id T")
+        if (alvo.children[i] == undefined) {} else if (alvo.children[i].getAttribute("id") == "T") {
             alvo.children[i].removeAttribute("id")
             if (currentPlayer == "player1") {
                 alvo.children[i].setAttribute("id", "V")
@@ -61,15 +60,29 @@ function selector(e) {
                 currentPlayer = "player1"
                 break
             }
-        } else if (alvo.children[i].getAttribute("id") == "V") {
-            console.log("Id V")
-        } else if (alvo.children[i].getAttribute("id") == "A") {
-            console.log("Id A")
-        }
+        } else if (alvo.children[i].getAttribute("id") == "V") {} else if (alvo.children[i].getAttribute("id") == "A") {}
     }
+    testWinnerConditionInVertcal(e)
 }
 
-// Fim da função para colocar discos
+// Função testa a condição de vitoria
+
+
+
+function testWinnerConditionInVertcal(e) {
+
+    let alvo = e.currentTarget;
+    let numberOfChildren = alvo.children.length
+
+    for (i = 6; i >= 0; i--) {
+        if (alvo.children[i] == undefined) {} else if (alvo.children[i].getAttribute("id") == "V") {
+            console.log('V')
+        }
+    }
+
+}
+
+
 
 // document.getElementById(id).attribute=new value
 
