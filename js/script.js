@@ -73,10 +73,11 @@ function testWinnerConditionInVertcal(e) {
 
     let alvo = e.currentTarget;
     let numberOfChildren = alvo.children.length
+    let ChildOrder = alvo.childNodes
 
     for (i = 6; i >= 0; i--) {
         if (alvo.children[i] == undefined) {} else if (alvo.children[i].getAttribute("id") == "V") {
-            console.log('V')
+            console.log(alvo.childNodes[0].id)
         }
     }
 
