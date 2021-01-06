@@ -51,18 +51,32 @@ function exibir_ganhador(vencedor) {
     map = map2;
 
 
-
-
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
 
-    divResultado.style.width = '77vw'
-    divResultado.style.height = '77vw'
-    divResultado.style.backgroundColor = 'black'
-    divResultado.style.marginTop = '-77vw'
+    divResultado.style.width = '88vw'
+    divResultado.style.height = '73vw'
+    divResultado.style.marginLeft = '5vw'
+    divResultado.style.marginTop = '-71vw'
     divResultado.style.position = 'absolute'
-    divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
-    document.body.appendChild(divResultado);
+    //divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
+    
+    if (vencedor == "azul"){
+        divResultado.style.background = "black url('img/winblue.png') no-repeat center";
+        /*var img = document.createElement('img');
+            img.src = 'img/winblue.png';
+            document.getElementById('resultado_div').appendChild(divResultado);*/
+        document.body.appendChild(divResultado);
+    } else if (vencedor == "vermelho"){
+        divResultado.style.background = "black url('img/winred.png') no-repeat center";
+        /*var img = document.createElement('img');
+            img.src = 'img/winred.png';
+            document.getElementById(img).appendChild(divResultado);*/
+        document.body.appendChild(divResultado);
+    }
+
+    /*document.getElementById('resultado_div').createElement("img").setAttribute("url ", "(img/winblue.png)");
+    document.getElementById('resultado_div').createElement("img").setAttribute("url ", "(img/winred.png)");*/
 
     document.getElementById('resultado_div').onclick = function() {
 
@@ -210,10 +224,12 @@ function cria_jogo(map) {
 
 
                     if (par_ou_impar % 2 == 0) {
-                        document.getElementById('jogador').innerText = 'Vermelho'
+                        document.getElementById('jogador').innerHTML = 'Vermelho'
+                        document.getElementById('jogador').style.color = "red"
                         jogador = 'A';
                     } else {
-                        document.getElementById('jogador').innerText = 'Azul'
+                        document.getElementById('jogador').innerHTML = 'Azul'
+                        document.getElementById('jogador').style.color = "blue"
                         jogador = 'V';
                     }
 
