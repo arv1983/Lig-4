@@ -13,6 +13,7 @@ let map2 = map;
 
 
 
+
 function exibir_ganhador(vencedor) {
 
 
@@ -28,26 +29,49 @@ function exibir_ganhador(vencedor) {
 
     map = map2;
 
-    document.getElementById("lab").remove();
 
 
 
-    var divNova = document.createElement("div");
-    divNova.setAttribute("id", 'lab');
+    var divResultado = document.createElement("div");
+    divResultado.setAttribute("id", 'resultado_div');
 
-    document.body.appendChild(divNova)
+    divResultado.style.width = '77vw'
+    divResultado.style.height = '77vw'
+    divResultado.style.backgroundColor = 'black'
+    divResultado.style.marginTop = '-77vw'
+    divResultado.style.position = 'absolute'
+    divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
+    document.body.appendChild(divResultado);
+
+    document.getElementById('resultado_div').onclick = function() {
+
+        document.getElementById("lab").remove();
+        document.getElementById("resultado_div").remove();
+        var divNova = document.createElement("div");
+        divNova.setAttribute("id", 'lab');
+        document.body.appendChild(divNova)
+        cria_jogo(map2)
+
+    }
 
 
-    console.log(map2)
+
+
+
+    // document.getElementById("lab").remove();
+
+
+
+    // var divNova = document.createElement("div");
+    // divNova.setAttribute("id", 'lab');
+    // document.body.appendChild(divNova)
+    // console.log(map2)
 
 
 
 
-    alert(vencedor)
-
-    console.log(map2)
-
-    cria_jogo(map2)
+    // alert(vencedor)
+    // cria_jogo(map2)
 
 }
 
@@ -57,10 +81,10 @@ function verifica_ganhador() {
 
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
-        if (map[i].join('').indexOf('AAAA') > 0) {
+        if (map[i].join('').indexOf('AAAA') >= 0) {
             exibir_ganhador('azul');
         }
-        if (map[i].join('').indexOf('VVVV') > 0) {
+        if (map[i].join('').indexOf('VVVV') >= 0) {
             exibir_ganhador('vermelho');
 
         }
@@ -165,10 +189,14 @@ function cria_jogo(map) {
 
 
                     if (par_ou_impar % 2 == 0) {
+                        document.getElementById('jogador').innerText = 'Vermelho'
                         jogador = 'A';
                     } else {
+                        document.getElementById('jogador').innerText = 'Azul'
                         jogador = 'V';
                     }
+
+
 
                     ////// funcao mmanipula array
                     //////////////// consertar erro...
@@ -193,6 +221,9 @@ function cria_jogo(map) {
 
 
                     }
+
+
+
 
 
 

@@ -15,6 +15,7 @@ body {
     border: 0.5vw solid rgb(0, 0, 0);
     border-radius: 50%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
+    z-index: 0;
 }
 
 .V {
@@ -26,6 +27,7 @@ body {
     background-image: linear-gradient(to bottom right, red, rgb(153, 153, 0));
     border-radius: 100%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
+    z-index: 0;
 }
 
 .A {
@@ -37,6 +39,7 @@ body {
     background-image: linear-gradient(to bottom right, blue, rgb(153, 153, 0));
     border-radius: 100%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
+    z-index: 0;
 }
 
 .bola_vermelha {
