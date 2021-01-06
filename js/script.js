@@ -10,6 +10,28 @@ let map2 = map;
 
 //
 
+const buttonreset = document.getElementById("butreset")
+buttonreset.addEventListener("click", resetar)
+let botao = document.createElement("button")
+
+function resetar() {
+
+    // let map2 = [
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
+    // ];
+
+    // document.getElementById("lab").remove();
+    // document.getElementById("tit").innerHTML = ("LIG-4");
+    // document.getElementById("butreset").style.display = "none";
+    // cria_jogo(map2)
+    window.location.reload()
+}
+
 
 
 
@@ -28,26 +50,49 @@ function exibir_ganhador(vencedor) {
 
     map = map2;
 
-    document.getElementById("lab").remove();
 
 
 
-    var divNova = document.createElement("div");
-    divNova.setAttribute("id", 'lab');
+    var divResultado = document.createElement("div");
+    divResultado.setAttribute("id", 'resultado_div');
 
-    document.body.appendChild(divNova)
+    divResultado.style.width = '77vw'
+    divResultado.style.height = '77vw'
+    divResultado.style.backgroundColor = 'black'
+    divResultado.style.marginTop = '-77vw'
+    divResultado.style.position = 'absolute'
+    divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
+    document.body.appendChild(divResultado);
+
+    document.getElementById('resultado_div').onclick = function() {
+
+        document.getElementById("lab").remove();
+        document.getElementById("resultado_div").remove();
+        var divNova = document.createElement("div");
+        divNova.setAttribute("id", 'lab');
+        document.body.appendChild(divNova)
+        cria_jogo(map2)
+
+    }
 
 
-    console.log(map2)
+
+
+
+    // document.getElementById("lab").remove();
+
+
+
+    // var divNova = document.createElement("div");
+    // divNova.setAttribute("id", 'lab');
+    // document.body.appendChild(divNova)
+    // console.log(map2)
 
 
 
 
-    alert(vencedor)
-
-    console.log(map2)
-
-    cria_jogo(map2)
+    // alert(vencedor)
+    // cria_jogo(map2)
 
 }
 
@@ -165,10 +210,14 @@ function cria_jogo(map) {
 
 
                     if (par_ou_impar % 2 == 0) {
+                        document.getElementById('jogador').innerText = 'Vermelho'
                         jogador = 'A';
                     } else {
+                        document.getElementById('jogador').innerText = 'Azul'
                         jogador = 'V';
                     }
+
+
 
                     ////// funcao mmanipula array
                     //////////////// consertar erro...
@@ -193,6 +242,9 @@ function cria_jogo(map) {
 
 
                     }
+
+
+
 
 
 
