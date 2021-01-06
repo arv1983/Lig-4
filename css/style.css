@@ -8,43 +8,47 @@ body {
 }
 
 .T {
-    z-index: 0;
     width: 9vw;
     height: 9vw;
+
     /* background: rgb(235, 235, 235); */
     background-image: url("../img/backgroundBolaVazia.jpg");
     background-size: 100% auto;
+
     margin: 0.5vw;
     border: 0.5vw solid rgb(0, 0, 0);
     border-radius: 50%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
-    z-index: 0;
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%)
 }
 
 .V {
-    z-index: 0;
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
     margin: 0.5vw;
     border: 0.5vw solid rgb(0, 0, 0);
-    background-image: linear-gradient(to bottom right, red, rgb(153, 153, 0));
+
+    /* background-image: linear-gradient(to bottom right, red, rgb(153, 153, 0)); */
+    background-image: url("../img/BolaVermelha.jpeg");
+    background-size: 100% auto;
+    
     border-radius: 100%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
-    z-index: 0;
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%)
 }
 
 .A {
-    z-index: 0;
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
     margin: 0.5vw;
     border: 0.5vw solid rgb(0, 0, 0);
-    background-image: linear-gradient(to bottom right, blue, rgb(153, 153, 0));
+    
+    /* background-image: linear-gradient(to bottom right, blue, rgb(153, 153, 0)); */
+    background-image: url("../img/bolaAzul.jpeg");
+    background-size: 100% auto;
+    
     border-radius: 100%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.801);
-    z-index: 0;
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%)
 }
 
 .bola_vermelha {
@@ -64,12 +68,17 @@ body {
     flex-direction: row;
     width: 77vw;
     flex-wrap: wrap;
-    background-color: rgb(114, 114, 114);
+
+    
+background-color: rgb(114, 114, 114);
+background-image: url("../img/BackGroundTabuleiro.jpg");
+background-size: 138%;
+
     margin: 0px auto;
     align-items: center;
     border: 3px solid black;
     border-radius: 3%;
-    box-shadow: 5px 5px 10px rgba(0, 217, 255, 0.801);
+    box-shadow: 0px 0px 40px rgba(0, 217, 255, 0.5);
 }
 
 #tit {
