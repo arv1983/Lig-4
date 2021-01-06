@@ -117,7 +117,7 @@ function cria_jogo() {
 
             torre.setAttribute("class", map[i][a]);
 
-            document.getElementById('lab').appendChild(torre).onclick = function() {
+            document.getElementById('lab').appendChild(torre).onclick = function () {
 
 
                 if (map[0][a] != 'T') {
