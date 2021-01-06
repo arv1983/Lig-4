@@ -6,27 +6,76 @@ let map = [
     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
 ];
-
+let map2 = map;
 
 //
 
+const buttonreset = document.getElementById("butreset")
+buttonreset.addEventListener("click", resetar)
+let botao = document.createElement("button")
+
+function resetar() {
+
+    // let map2 = [
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
+    // ];
+
+    // document.getElementById("lab").remove();
+    // document.getElementById("tit").innerHTML = ("LIG-4");
+    // document.getElementById("butreset").style.display = "none";
+    // cria_jogo(map2)
+    window.location.reload()
+}
+
+//
+function exibir_ganhador(vencedor) {
+
+
+    var divNova = document.createElement("div");
+    divNova.setAttribute("id", 'lab');
+
+    document.body.appendChild(divNova)
+
+
+    console.log(map2)
+
+
+    buttonreset.appendChild(botao)
+    botao.innerHTML = (" RESET ");
+
+    document.getElementById("tit").innerHTML = `O jogador ${vencedor} venceu!!!`
+
+    console.log(map2)
+
+}
 
 verifica_ganhador()
 
 function verifica_ganhador() {
+
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
-        if (map[i].join('').indexOf('AAAA') > 0) {
-            console.log('azul ganha')
+        if (map[i].join('').indexOf('AAAA') >= 0) {
+            exibir_ganhador('azul');
         }
-        if (map[i].join('').indexOf('VVVV') > 0) {
-            console.log('vermelho ganha')
+        if (map[i].join('').indexOf('VVVV') >= 0) {
+            exibir_ganhador('vermelho');
+
         }
 
 
         //////////// verifica vertical DIREITA
-        let conta_a = 0;
-        let conta_v = 0;
+    }
+
+
+    let conta_a = 0;
+    let conta_v = 0;
+    for (let i = 0; i <= map.length; i++) {
         for (let a = 0; a <= 5; a++) {
 
             if (map[a][i] == 'A') {
@@ -35,7 +84,7 @@ function verifica_ganhador() {
                 conta_a = 0;
             }
             if (conta_a == 4) {
-                console.log('azul ganha')
+                exibir_ganhador('azul');
             }
 
             if (map[a][i] == 'V') {
@@ -44,31 +93,30 @@ function verifica_ganhador() {
                 conta_v = 0;
             }
             if (conta_v == 4) {
-                console.log('vermelho ganha')
+                exibir_ganhador('vermelho');
             }
 
         }
-
-
-
     }
 
-    //////////// verifica diagonal direita
+
+
+    //////////// verifica diagonal direita e esquerda
     for (let a = 5; a > 0; a--) {
         for (let i = 0; i <= 6; i++) {
             if (map[a][i] == 'A' && map[a - 1][i - 1] == 'A' && map[a - 2][i - 2] == 'A' && map[a - 3][i - 3] == 'A') {
-                console.log('Ganhou Azul')
+                exibir_ganhador('azul');
             }
             if (map[a][i] == 'V' && map[a - 1][i - 1] == 'V' && map[a - 2][i - 2] == 'V' && map[a - 3][i - 3] == 'V') {
-                console.log('Ganhou vermelho')
+                exibir_ganhador('vermelho');
             }
 
             if (map[a][i] == 'A' && map[a - 1][i + 1] == 'A' && map[a - 2][i + 2] == 'A' && map[a - 3][i + 3] == 'A') {
-                console.log('Ganhou Azul')
+                exibir_ganhador('azul');
             }
             if (map[a][i] == 'V' && map[a - 1][i + 1] == 'V' && map[a - 2][i + 2] == 'V' && map[a - 3][i + 3] == 'V') {
 
-                console.log('Ganhou vermelho')
+                exibir_ganhador('vermelho');
 
             }
 
@@ -76,18 +124,6 @@ function verifica_ganhador() {
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -106,7 +142,7 @@ cria_jogo(map);
 let par_ou_impar = 0;
 let jogador = 0;
 
-function cria_jogo() {
+function cria_jogo(map) {
     for (let i = 0; i < map.length; i++) {
 
         for (let a = 0; a < map[i].length; a++) {
@@ -119,7 +155,7 @@ function cria_jogo() {
 
             document.getElementById('lab').appendChild(torre).onclick = function () {
 
-
+                console.log('map atual' + map[0][a] + ' A= ' + a)
                 if (map[0][a] != 'T') {
                     console.log('ta cheio')
 
