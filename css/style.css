@@ -8,9 +8,10 @@ body {
 }
 
 .T {
+    z-index: 0;
     width: 9vw;
     height: 9vw;
-
+    
     /* background: rgb(235, 235, 235); */
     background-image: url("../img/backgroundBolaVazia.jpg");
     background-size: 100% auto;
@@ -22,6 +23,7 @@ body {
 }
 
 .V {
+    z-index: 0;
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
@@ -37,6 +39,7 @@ body {
 }
 
 .A {
+    z-index: 0;
     width: 9vw;
     height: 9vw;
     background: rgb(255, 255, 255);
