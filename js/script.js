@@ -57,10 +57,10 @@ function verifica_ganhador() {
 
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
-        if (map[i].join('').indexOf('AAAA') > 0) {
+        if (map[i].join('').indexOf('AAAA') >= 0) {
             exibir_ganhador('azul');
         }
-        if (map[i].join('').indexOf('VVVV') > 0) {
+        if (map[i].join('').indexOf('VVVV') >= 0) {
             exibir_ganhador('vermelho');
 
         }
