@@ -10,6 +10,27 @@ let map2 = map;
 
 //
 
+const buttonreset = document.getElementById("butreset")
+buttonreset.addEventListener("click", resetar)
+let botao = document.createElement("button")
+
+function resetar() {
+
+    // let map2 = [
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
+    // ];
+
+    // document.getElementById("lab").remove();
+    // document.getElementById("tit").innerHTML = ("LIG-4");
+    // document.getElementById("butreset").style.display = "none";
+    // cria_jogo(map2)
+    window.location.reload()
+}
 
 
 
