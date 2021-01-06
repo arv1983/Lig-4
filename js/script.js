@@ -10,26 +10,30 @@ let map2 = map;
 
 //
 
+const buttonreset = document.getElementById("butreset")
+buttonreset.addEventListener("click", resetar)
+let botao = document.createElement("button")
 
+function resetar() {
 
+    // let map2 = [
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
+    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
+    // ];
 
+    // document.getElementById("lab").remove();
+    // document.getElementById("tit").innerHTML = ("LIG-4");
+    // document.getElementById("butreset").style.display = "none";
+    // cria_jogo(map2)
+    window.location.reload()
+}
+
+//
 function exibir_ganhador(vencedor) {
-
-
-
-    const map2 = [
-        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-        ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-        ['T', 'T', 'T', 'T', 'T', 'T', 'T']
-    ];
-
-    map = map2;
-
-    document.getElementById("lab").remove();
-
 
 
     var divNova = document.createElement("div");
@@ -41,13 +45,12 @@ function exibir_ganhador(vencedor) {
     console.log(map2)
 
 
+    buttonreset.appendChild(botao)
+    botao.innerHTML = (" RESET ");
 
-
-    alert(vencedor)
+    document.getElementById("tit").innerHTML = `O jogador ${vencedor} venceu!!!`
 
     console.log(map2)
-
-    cria_jogo(map2)
 
 }
 
@@ -57,10 +60,10 @@ function verifica_ganhador() {
 
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
-        if (map[i].join('').indexOf('AAAA') > 0) {
+        if (map[i].join('').indexOf('AAAA') >= 0) {
             exibir_ganhador('azul');
         }
-        if (map[i].join('').indexOf('VVVV') > 0) {
+        if (map[i].join('').indexOf('VVVV') >= 0) {
             exibir_ganhador('vermelho');
 
         }
