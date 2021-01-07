@@ -57,11 +57,11 @@ function exibir_ganhador(vencedor) {
     divResultado.setAttribute("id", 'resultado_div');
 
     divResultado.style.width = '100%'
-    divResultado.style.height = '100%'
+    divResultado.style.height = '100vw'
     divResultado.style.top = '0'
     divResultado.style.left = '0'
     divResultado.style.position = 'absolute'
-    divResultado.style.backgroundColor = 'transparent'
+
     divResultado.style.backdropFilter = 'blur(15px)'
 
     //divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
