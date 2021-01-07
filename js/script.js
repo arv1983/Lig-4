@@ -81,8 +81,10 @@ function exibir_ganhador(vencedor) {
 
     if (vencedor == "azul") {
         img.src = 'img/winblue.png';
-    } else {
+    } else if (vencedor == "vermelho") {
         img.src = 'img/winred.png';
+    } else {
+        img.src = 'img/emp.png';
     }
     document.getElementById('resultado_div').appendChild(img);
 
