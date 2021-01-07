@@ -38,6 +38,9 @@ function exibir_ganhador(vencedor) {
 
 
 
+
+
+
     const map2 = [
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
@@ -48,6 +51,9 @@ function exibir_ganhador(vencedor) {
     ];
 
     map = map2;
+
+
+
 
     // background: url(img/winblue.png) center center no-repeat #003eff00;
     // backdrop-filter: blur(97px);
@@ -117,6 +123,24 @@ function exibir_ganhador(vencedor) {
 verifica_ganhador()
 
 function verifica_ganhador() {
+
+    /////////////////////////// condição de empate
+    let conta_os_t = 0;
+    for (let i = 0; i <= map.length; i++) {
+        for (let a = 0; a <= 5; a++) {
+            if (map[a][i] == 'T') {
+                conta_os_t++;
+            }
+
+        }
+    }
+    if (conta_os_t == 0) {
+        exibir_ganhador('empate');
+    }
+
+
+
+
 
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
