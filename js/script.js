@@ -70,7 +70,7 @@ function exibir_ganhador(vencedor) {
 
     var img = document.createElement('img');
 
-    img.style.width = '70vw';
+    img.style.width = '43vw';
     img.style.marginTop = '12vw';
     img.style.background = 'transparent'
 
