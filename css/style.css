@@ -28,7 +28,6 @@ body {
     background-size: 100% auto;
     border-radius: 100%;
     box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
-    
 }
 
 .A {
@@ -77,6 +76,7 @@ body {
 
 #vezde {
     font-family: monospace;
+    font-size: 2.5vw;
     background-color: #000;
     color: rgb(228, 228, 228);
     text-shadow: 3px 16px 44px rgb(255 255 255 / 21%);
@@ -87,42 +87,56 @@ body {
     color: red;
 }
 
-/* TAMANHO bolinhas tabuleiro e textox e textos */
-.T,.A,.V{
-    width: 5vw;
-    height: 5vw;
-}
-#lab{
-    width: 49vw;
-    height: 42vw;
+h1 {
+    font-size: 5vw;
 }
 
-#vezde{
-    font-size: 1.3vw;
-}
-h1  {
-    font-size: 1.7vw;
+
+/* Media query para: Moto g4, Galaxy S5, Pixel 2,Pixel 2 xl,Ipad, Ipad Pro,Galaxy Fold */
+
+@media only screen and (max-height: 480px) {
+    .T,
+    .A,
+    .V {
+        width: 6vw;
+        height: 6vw;
     }
-@media only screen and (max-device-width: 736px) {
-    #lab{
-        width: 53.2vw;
-        height: 45.3vw;
+    #lab {
+        width: 57vw;
     }
-    .T,.A,.V{
-        width: 5.6vw;
-        height: 5.6vw;
+    .bola_vermelha {
+        width: 6vw;
+        height: 6vw;
     }
-    h1{
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
         font-size: 2vw;
     }
-    #vezde{
-        font-size: 1.5vw
+    #vezde {
+        font-size: 1.7vw;
     }
 }
 
-@media (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
-@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+/* Media query para: Desktop*/
+
+@media only screen and (min-width: 1285px) {
+    .T,
+    .A,
+    .V {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+    #lab {
+        width: 46vw;
+    }
+    .bola_vermelha {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+    }
+}
