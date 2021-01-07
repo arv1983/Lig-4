@@ -50,16 +50,18 @@ function exibir_ganhador(vencedor) {
 
     map = map2;
 
+    // background: url(img/winblue.png) center center no-repeat #003eff00;
+    // backdrop-filter: blur(97px);
 
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
 
     divResultado.style.width = '100%'
-    divResultado.style.height = '100%'
+    divResultado.style.height = '100vw'
     divResultado.style.top = '0'
     divResultado.style.left = '0'
     divResultado.style.position = 'absolute'
-    divResultado.style.backgroundColor = 'transparent'
+
     divResultado.style.backdropFilter = 'blur(15px)'
 
     //divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
@@ -81,7 +83,7 @@ function exibir_ganhador(vencedor) {
 
 
 
-    document.getElementById('resultado_div').onclick = function() {
+    document.getElementById('resultado_div').onclick = function () {
 
         document.getElementById("lab").remove();
         document.getElementById("resultado_div").remove();
@@ -212,7 +214,7 @@ function cria_jogo(map) {
 
             torre.setAttribute("class", map[i][a]);
 
-            document.getElementById('lab').appendChild(torre).onclick = function() {
+            document.getElementById('lab').appendChild(torre).onclick = function () {
 
                 console.log('map atual' + map[0][a] + ' A= ' + a)
                 if (map[0][a] != 'T') {
