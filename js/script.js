@@ -15,19 +15,6 @@ let botao = document.createElement("button")
 
 function resetar() {
 
-    // let map2 = [
-    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
-    //     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
-    // ];
-
-    // document.getElementById("lab").remove();
-    // document.getElementById("tit").innerHTML = ("LIG-4");
-    // document.getElementById("butreset").style.display = "none";
-    // cria_jogo(map2)
     window.location.reload()
 }
 
@@ -53,11 +40,6 @@ function exibir_ganhador(vencedor) {
     map = map2;
 
 
-
-
-    // background: url(img/winblue.png) center center no-repeat #003eff00;
-    // backdrop-filter: blur(97px);
-
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
 
@@ -66,12 +48,8 @@ function exibir_ganhador(vencedor) {
     divResultado.style.top = '0'
     divResultado.style.left = '0'
     divResultado.style.position = 'absolute'
-
     divResultado.style.backdropFilter = 'blur(15px)'
-
-    //divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
     document.body.appendChild(divResultado);
-
 
     var img = document.createElement('img');
 
@@ -87,9 +65,6 @@ function exibir_ganhador(vencedor) {
         img.src = 'img/emp.png';
     }
     document.getElementById('resultado_div').appendChild(img);
-
-
-
     document.getElementById('resultado_div').onclick = function() {
 
         document.getElementById("lab").remove();
@@ -101,48 +76,23 @@ function exibir_ganhador(vencedor) {
 
     }
 
-
-
-
-
-    // document.getElementById("lab").remove();
-
-
-
-    // var divNova = document.createElement("div");
-    // divNova.setAttribute("id", 'lab');
-    // document.body.appendChild(divNova)
-    // console.log(map2)
-
-
-
-
-    // alert(vencedor)
-    // cria_jogo(map2)
-
 }
 
 verifica_ganhador()
 
 function verifica_ganhador() {
 
-    /////////////////////////// condição de empate
     let conta_os_t = 0;
     for (let i = 0; i <= map.length; i++) {
         for (let a = 0; a <= 5; a++) {
             if (map[a][i] == 'T') {
                 conta_os_t++;
             }
-
         }
     }
     if (conta_os_t == 0) {
         exibir_ganhador('empate');
     }
-
-
-
-
 
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
@@ -151,11 +101,7 @@ function verifica_ganhador() {
         }
         if (map[i].join('').indexOf('VVVV') >= 0) {
             exibir_ganhador('vermelho');
-
         }
-
-
-        //////////// verifica vertical DIREITA
     }
 
 
@@ -186,13 +132,8 @@ function verifica_ganhador() {
     }
 
 
-
-
     for (let a = 0; a <= 2; a++) { // verifica da base para esquerda
         for (let i = 0; i <= 3; i++) {
-
-
-
             if (map[a][i] == 'A' && map[a + 1][i + 1] == 'A' && map[a + 2][i + 2] == 'A' && map[a + 3][i + 3] == 'A') {
                 exibir_ganhador('azul');
             }
@@ -203,15 +144,8 @@ function verifica_ganhador() {
     }
 
 
-
-
-
-
     for (let a = 0; a <= 2; a++) { /// verifica da base para direita
         for (let i = 6; i >= 3; i--) {
-
-
-
             if (map[a][i] == 'A' && map[a + 1][i - 1] == 'A' && map[a + 2][i - 2] == 'A' && map[a + 3][i - 3] == 'A') {
                 exibir_ganhador('azul');
             }
@@ -220,15 +154,8 @@ function verifica_ganhador() {
             }
         }
     }
-
-
-
 }
 
-
-
-
-// cria parede caminho, entrada e saida com divs
 
 cria_jogo(map);
 let par_ou_impar = 0;
@@ -240,25 +167,13 @@ function cria_jogo(map) {
         for (let a = 0; a < map[i].length; a++) {
 
             var torre = document.createElement('div');
-
             torre.setAttribute("id", a);
-
             torre.setAttribute("class", map[i][a]);
-
             document.getElementById('lab').appendChild(torre).onclick = function() {
 
-                console.log('map atual' + map[0][a] + ' A= ' + a)
-                if (map[0][a] != 'T') {
-                    console.log('ta cheio')
 
-                } else {
-
-
+                if (map[0][a] != 'T') {} else {
                     par_ou_impar += 1;
-
-
-
-
                     if (par_ou_impar % 2 == 0) {
                         document.getElementById('jogador').innerHTML = 'Vermelho'
                         document.getElementById('jogador').style.color = "red"
@@ -270,53 +185,27 @@ function cria_jogo(map) {
                     }
 
 
-
                     ////// funcao mmanipula array
-                    //////////////// consertar erro...
-
                     for (let i = 0; i < 6; i++) {
-
-
-
-                        console.log(map[i][a])
-
-
-
                         if (map[i][a] != 'T') {
                             map[i - 1][a] = jogador;
-
                             break;
                         }
                         if (i == 5) {
                             map[i][a] = jogador;
-
                         }
-
-
                     }
 
 
-
-
-
-
-
                     document.getElementById("lab").remove();
-
-
-
                     var divNova = document.createElement("div");
                     divNova.setAttribute("id", 'lab');
-
                     document.body.appendChild(divNova)
-
-                    //recria
                     cria_jogo(map);
                     verifica_ganhador();
 
                 }
             };
-
         }
     }
 }
