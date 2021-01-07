@@ -103,7 +103,7 @@ body {
 
 
 h1 {
-    font-size: 5vw;
+    font-size: 2vw;
 }
 
 
@@ -113,11 +113,11 @@ h1 {
     .T,
     .A,
     .V {
-        width: 6vw;
-        height: 6vw;
+        width: 5vw;
+        height: 5vw;
     }
     #lab {
-        width: 57vw;
+        width: 49vw;
     }
     .bola_vermelha {
         width: 6vw;
@@ -133,6 +133,9 @@ h1 {
     }
 }
 
+
+
+@media only screen and (min-width: 1285px) {}
 
 /* Media query para: Desktop*/
 

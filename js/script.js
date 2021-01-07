@@ -8,6 +8,13 @@ let map = [
 ];
 let map2 = map;
 
+const audioWin = document.getElementById('audioWin');
+const audioEmpate = document.getElementById('audioEmpate');
+const audioC1 = document.getElementById('audioC1');
+const audioC2 = document.getElementById('audioC2');
+const audioC3 = document.getElementById('audioC3');
+
+
 
 const buttonreset = document.getElementById("butreset")
 buttonreset.addEventListener("click", resetar)
@@ -36,7 +43,7 @@ function resetar() {
 
 function exibir_ganhador(vencedor) {
 
-
+    document.getElementById('audioWin').play()
 
 
 
@@ -235,6 +242,7 @@ let par_ou_impar = 0;
 let jogador = 0;
 
 function cria_jogo(map) {
+
     for (let i = 0; i < map.length; i++) {
 
         for (let a = 0; a < map[i].length; a++) {
