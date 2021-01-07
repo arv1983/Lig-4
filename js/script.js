@@ -8,7 +8,6 @@ let map = [
 ];
 let map2 = map;
 
-//
 
 const buttonreset = document.getElementById("butreset")
 buttonreset.addEventListener("click", resetar)
@@ -83,7 +82,7 @@ function exibir_ganhador(vencedor) {
 
 
 
-    document.getElementById('resultado_div').onclick = function () {
+    document.getElementById('resultado_div').onclick = function() {
 
         document.getElementById("lab").remove();
         document.getElementById("resultado_div").remove();
@@ -162,37 +161,43 @@ function verifica_ganhador() {
 
 
 
-    //////////// verifica diagonal direita e esquerda
-    for (let a = 5; a >= 0; a--) { // loop n vertical
-        for (let i = 0; i <= 6; i++) { // loop da horizs
+
+    for (let a = 0; a <= 2; a++) { // verifica da base para esquerda
+        for (let i = 0; i <= 3; i++) {
 
 
-            if (map[a][i] == 'A' && map[a - 1][i - 1] == 'A' && map[a - 2][i - 2] == 'A' && map[a - 3][i - 3] == 'A') {
+
+            if (map[a][i] == 'A' && map[a + 1][i + 1] == 'A' && map[a + 2][i + 2] == 'A' && map[a + 3][i + 3] == 'A') {
                 exibir_ganhador('azul');
             }
-            if (map[a][i] == 'V' && map[a - 1][i - 1] == 'V' && map[a - 2][i - 2] == 'V' && map[a - 3][i - 3] == 'V') {
-                exibir_ganhador('vermelho');
-            }
-
-
-
-            if (map[a][i] == 'A' && map[a - 1][i + 1] == 'A' && map[a - 2][i + 2] == 'A' && map[a - 3][i + 3] == 'A') {
-                exibir_ganhador('azul');
-            }
-            if (map[a][i] == 'V' && map[a - 1][i + 1] == 'V' && map[a - 2][i + 2] == 'V' && map[a - 3][i + 3] == 'V') {
+            if (map[a][i] == 'V' && map[a + 1][i + 1] == 'V' && map[a + 2][i + 2] == 'V' && map[a + 3][i + 3] == 'V') {
                 exibir_ganhador('vermelho');
             }
         }
-
     }
 
 
 
 
 
+
+    for (let a = 0; a <= 2; a++) { /// verifica da base para direita
+        for (let i = 6; i >= 3; i--) {
+
+
+
+            if (map[a][i] == 'A' && map[a + 1][i - 1] == 'A' && map[a + 2][i - 2] == 'A' && map[a + 3][i - 3] == 'A') {
+                exibir_ganhador('azul');
+            }
+            if (map[a][i] == 'V' && map[a + 1][i - 1] == 'V' && map[a + 2][i - 2] == 'V' && map[a + 3][i - 3] == 'V') {
+                exibir_ganhador('vermelho');
+            }
+        }
+    }
+
+
+
 }
-
-
 
 
 
@@ -214,7 +219,7 @@ function cria_jogo(map) {
 
             torre.setAttribute("class", map[i][a]);
 
-            document.getElementById('lab').appendChild(torre).onclick = function () {
+            document.getElementById('lab').appendChild(torre).onclick = function() {
 
                 console.log('map atual' + map[0][a] + ' A= ' + a)
                 if (map[0][a] != 'T') {
