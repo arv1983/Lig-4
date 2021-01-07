@@ -56,30 +56,32 @@ function exibir_ganhador(vencedor) {
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
 
-    divResultado.style.width = '88vw'
-    divResultado.style.height = '73vw'
-    divResultado.style.marginLeft = '5vw'
-    divResultado.style.marginTop = '-71vw'
-    divResultado.style.position = 'absolute'
+    divResultado.style.width = '100vw'
+    divResultado.style.height = '100vw'
+    divResultado.style.marginLeft = '-2.1vw'
+    divResultado.style.marginTop = '-80vw'
+    divResultado.style.position = 'initial'
+    divResultado.style.backgroundColor = 'transparent'
     divResultado.style.backdropFilter = 'blur(15px)'
+
     //divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
+    document.body.appendChild(divResultado);
+
+
+    var img = document.createElement('img');
+
+    img.style.width = '70vw';
+    img.style.marginTop = '12vw';
+    img.style.background = 'transparent'
 
     if (vencedor == "azul") {
-        divResultado.style.background = "transparent url('img/winblue.png') no-repeat center ";
-        /*var img = document.createElement('img');
-            img.src = 'img/winblue.png';
-            document.getElementById('resultado_div').appendChild(divResultado);*/
-        document.body.appendChild(divResultado);
-    } else if (vencedor == "vermelho") {
-        divResultado.style.background = "transparent  url('img/winred.png') no-repeat center";
-        /*var img = document.createElement('img');
-            img.src = 'img/winred.png';
-            document.getElementById(img).appendChild(divResultado);*/
-        document.body.appendChild(divResultado);
+        img.src = 'img/winblue.png';
+    } else {
+        img.src = 'img/winred.png';
     }
+    document.getElementById('resultado_div').appendChild(img);
 
-    /*document.getElementById('resultado_div').createElement("img").setAttribute("url ", "(img/winblue.png)");
-    document.getElementById('resultado_div').createElement("img").setAttribute("url ", "(img/winred.png)");*/
+
 
     document.getElementById('resultado_div').onclick = function () {
 
