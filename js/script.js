@@ -8,7 +8,6 @@ let map = [
 ];
 let map2 = map;
 
-//
 
 const buttonreset = document.getElementById("butreset")
 buttonreset.addEventListener("click", resetar)
@@ -39,6 +38,9 @@ function exibir_ganhador(vencedor) {
 
 
 
+
+
+
     const map2 = [
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
@@ -49,6 +51,9 @@ function exibir_ganhador(vencedor) {
     ];
 
     map = map2;
+
+
+
 
     // background: url(img/winblue.png) center center no-repeat #003eff00;
     // backdrop-filter: blur(97px);
@@ -71,7 +76,7 @@ function exibir_ganhador(vencedor) {
     var img = document.createElement('img');
 
     img.style.width = '70vw';
-    img.style.marginTop = '12vw';
+    img.style.marginTop = '20vw';
     img.style.background = 'transparent'
 
     if (vencedor == "azul") {
@@ -83,7 +88,7 @@ function exibir_ganhador(vencedor) {
 
 
 
-    document.getElementById('resultado_div').onclick = function () {
+    document.getElementById('resultado_div').onclick = function() {
 
         document.getElementById("lab").remove();
         document.getElementById("resultado_div").remove();
@@ -118,6 +123,24 @@ function exibir_ganhador(vencedor) {
 verifica_ganhador()
 
 function verifica_ganhador() {
+
+    /////////////////////////// condição de empate
+    let conta_os_t = 0;
+    for (let i = 0; i <= map.length; i++) {
+        for (let a = 0; a <= 5; a++) {
+            if (map[a][i] == 'T') {
+                conta_os_t++;
+            }
+
+        }
+    }
+    if (conta_os_t == 0) {
+        exibir_ganhador('empate');
+    }
+
+
+
+
 
     for (let i = 0; i < map.length; i++) {
         ////////////// verifica horizontal
@@ -162,37 +185,43 @@ function verifica_ganhador() {
 
 
 
-    //////////// verifica diagonal direita e esquerda
-    for (let a = 5; a > 0; a--) {
-        for (let i = 0; i <= 6; i++) {
-            if (map[a][i] == 'A' && map[a - 1][i - 1] == 'A' && map[a - 2][i - 2] == 'A' && map[a - 3][i - 3] == 'A') {
+
+    for (let a = 0; a <= 2; a++) { // verifica da base para esquerda
+        for (let i = 0; i <= 3; i++) {
+
+
+
+            if (map[a][i] == 'A' && map[a + 1][i + 1] == 'A' && map[a + 2][i + 2] == 'A' && map[a + 3][i + 3] == 'A') {
                 exibir_ganhador('azul');
             }
-            if (map[a][i] == 'V' && map[a - 1][i - 1] == 'V' && map[a - 2][i - 2] == 'V' && map[a - 3][i - 3] == 'V') {
+            if (map[a][i] == 'V' && map[a + 1][i + 1] == 'V' && map[a + 2][i + 2] == 'V' && map[a + 3][i + 3] == 'V') {
                 exibir_ganhador('vermelho');
             }
-
-            if (map[a][i] == 'A' && map[a - 1][i + 1] == 'A' && map[a - 2][i + 2] == 'A' && map[a - 3][i + 3] == 'A') {
-                exibir_ganhador('azul');
-            }
-            if (map[a][i] == 'V' && map[a - 1][i + 1] == 'V' && map[a - 2][i + 2] == 'V' && map[a - 3][i + 3] == 'V') {
-
-                exibir_ganhador('vermelho');
-
-            }
-
-
         }
-
     }
 
 
 
 
 
+
+    for (let a = 0; a <= 2; a++) { /// verifica da base para direita
+        for (let i = 6; i >= 3; i--) {
+
+
+
+            if (map[a][i] == 'A' && map[a + 1][i - 1] == 'A' && map[a + 2][i - 2] == 'A' && map[a + 3][i - 3] == 'A') {
+                exibir_ganhador('azul');
+            }
+            if (map[a][i] == 'V' && map[a + 1][i - 1] == 'V' && map[a + 2][i - 2] == 'V' && map[a + 3][i - 3] == 'V') {
+                exibir_ganhador('vermelho');
+            }
+        }
+    }
+
+
+
 }
-
-
 
 
 
@@ -214,7 +243,7 @@ function cria_jogo(map) {
 
             torre.setAttribute("class", map[i][a]);
 
-            document.getElementById('lab').appendChild(torre).onclick = function () {
+            document.getElementById('lab').appendChild(torre).onclick = function() {
 
                 console.log('map atual' + map[0][a] + ' A= ' + a)
                 if (map[0][a] != 'T') {
