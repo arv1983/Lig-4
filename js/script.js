@@ -50,6 +50,8 @@ function exibir_ganhador(vencedor) {
 
     map = map2;
 
+    // background: url(img/winblue.png) center center no-repeat #003eff00;
+    // backdrop-filter: blur(97px);
 
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
@@ -59,16 +61,17 @@ function exibir_ganhador(vencedor) {
     divResultado.style.marginLeft = '5vw'
     divResultado.style.marginTop = '-71vw'
     divResultado.style.position = 'absolute'
+    divResultado.style.backdropFilter = 'blur(15px)'
     //divResultado.innerText = 'O jogador ' + vencedor + ' ganhou';
 
     if (vencedor == "azul") {
-        divResultado.style.background = "black url('img/winblue.png') no-repeat center";
+        divResultado.style.background = "transparent url('img/winblue.png') no-repeat center ";
         /*var img = document.createElement('img');
             img.src = 'img/winblue.png';
             document.getElementById('resultado_div').appendChild(divResultado);*/
         document.body.appendChild(divResultado);
     } else if (vencedor == "vermelho") {
-        divResultado.style.background = "black url('img/winred.png') no-repeat center";
+        divResultado.style.background = "transparent  url('img/winred.png') no-repeat center";
         /*var img = document.createElement('img');
             img.src = 'img/winred.png';
             document.getElementById(img).appendChild(divResultado);*/
