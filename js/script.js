@@ -124,7 +124,7 @@ verifica_ganhador()
 
 function verifica_ganhador() {
 
-
+    /////////////////////////// condição de empate
     let conta_os_t = 0;
     for (let i = 0; i <= map.length; i++) {
         for (let a = 0; a <= 5; a++) {
