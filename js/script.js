@@ -168,7 +168,8 @@ function cria_jogo(map) {
 
             var torre = document.createElement('div');
             torre.setAttribute("id", a);
-            torre.setAttribute("class", map[i][a]);
+            torre.setAttribute("class", map[i][a], 'teste');
+
             document.getElementById('lab').appendChild(torre).onclick = function() {
 
 
