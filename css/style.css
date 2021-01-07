@@ -87,6 +87,21 @@ body {
     color: red;
 }
 
+/* TAMANHO bolinhas tabuleiro e textox e textos */
+.T,.A,.V{
+    width: 5vw;
+    height: 5vw;
+}
+#lab{
+    width: 49vw;
+    height: 42vw;
+}
+
+#vezde{
+    font-size: 1.3vw;
+}
+
+
 h1 {
     font-size: 5vw;
 }
