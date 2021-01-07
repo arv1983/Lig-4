@@ -54,11 +54,11 @@ function exibir_ganhador(vencedor) {
     var divResultado = document.createElement("div");
     divResultado.setAttribute("id", 'resultado_div');
 
-    divResultado.style.width = '100vw'
-    divResultado.style.height = '100vw'
-    divResultado.style.marginLeft = '-2.1vw'
-    divResultado.style.marginTop = '-80vw'
-    divResultado.style.position = 'initial'
+    divResultado.style.width = '100%'
+    divResultado.style.height = '100%'
+    divResultado.style.top = '0'
+    divResultado.style.left = '0'
+    divResultado.style.position = 'absolute'
     divResultado.style.backgroundColor = 'transparent'
     divResultado.style.backdropFilter = 'blur(15px)'
 
