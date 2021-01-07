@@ -69,7 +69,7 @@ function exibir_ganhador(vencedor) {
     var img = document.createElement('img');
 
     img.style.width = '70vw';
-    img.style.marginTop = '12vw';
+    img.style.marginTop = '20vw';
     img.style.background = 'transparent'
 
     if (vencedor == "azul") {
@@ -161,8 +161,10 @@ function verifica_ganhador() {
 
 
     //////////// verifica diagonal direita e esquerda
-    for (let a = 5; a > 0; a--) {
-        for (let i = 0; i <= 6; i++) {
+    for (let a = 5; a >= 0; a--) { // loop n vertical
+        for (let i = 0; i <= 6; i++) { // loop da horizs
+
+
             if (map[a][i] == 'A' && map[a - 1][i - 1] == 'A' && map[a - 2][i - 2] == 'A' && map[a - 3][i - 3] == 'A') {
                 exibir_ganhador('azul');
             }
@@ -170,16 +172,14 @@ function verifica_ganhador() {
                 exibir_ganhador('vermelho');
             }
 
+
+
             if (map[a][i] == 'A' && map[a - 1][i + 1] == 'A' && map[a - 2][i + 2] == 'A' && map[a - 3][i + 3] == 'A') {
                 exibir_ganhador('azul');
             }
             if (map[a][i] == 'V' && map[a - 1][i + 1] == 'V' && map[a - 2][i + 2] == 'V' && map[a - 3][i + 3] == 'V') {
-
                 exibir_ganhador('vermelho');
-
             }
-
-
         }
 
     }
