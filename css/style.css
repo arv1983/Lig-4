@@ -84,11 +84,11 @@ body {
 
 #vezde {
     font-family: monospace;
-    font-size: 2.5vw;
+   
     background-color: #000;
     color: rgb(228, 228, 228);
     text-shadow: 3px 16px 44px rgb(255 255 255 / 21%);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .jg1 {
@@ -111,21 +111,22 @@ body {
 
 
 h1 {
-    font-size: 2vw;
+    font-size: 1.7vw;
 }
 
 
 /* Media query para: Moto g4, Galaxy S5, Pixel 2,Pixel 2 xl,Ipad, Ipad Pro,Galaxy Fold */
+@media only screen and (max-height: 280px ){
 
-@media only screen and (max-height: 480px) {
     .T,
     .A,
     .V {
-        width: 5vw;
-        height: 5vw;
+        width: 3.6vw;
+        height: 3.6vw;
     }
     #lab {
-        width: 49vw;
+        width: 39.3vw;
+        height: 33vw;
     }
     .bola_vermelha {
         width: 6vw;
@@ -137,13 +138,34 @@ h1 {
         font-size: 2vw;
     }
     #vezde {
-        font-size: 1.7vw;
+        font-size: 1.7vw;}
+
+}
+@media only screen and (max-height: 480px) {
+    .T,
+    .A,
+    .V {
+        width: 4.7vw;
+        height: 4.7vw;
+    }
+    #lab {
+        width: 47vw;
+        height: 40vw;
+    }
+    .bola_vermelha {
+        width: 6vw;
+        height: 6vw;
+    }
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 1.3vw;
+    }
+    #vezde {
+        font-size: 1.3vw;
     }
 }
 
-
-
-@media only screen and (min-width: 1285px) {}
 
 /* Media query para: Desktop*/
 
@@ -164,5 +186,88 @@ h1 {
     #tit {
         margin-block-start: 0.47em;
         margin-block-end: 0.47em;
+        font-size: 2rem;
+    }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 20px;
     }
 }
+
+
+@media only screen and (width: 720px) {
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 2rem;
+    }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 20px;
+    }
+}
+@media only screen and (width: 653px) {
+    .T,
+    .A,
+    .V {
+        width: 3.7vw;
+        height: 3.7vw;
+    }
+    #lab {
+        width: 40vw;
+        height: 35vw;
+    }
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 1.5vw;
+    }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 5px;
+    }
+
+}
+
+
+@media only screen and (min-height:568px) {
+    .T,
+    .A,
+    .V {
+        width: 9vw;
+    height: 9vw;
+    }
+    #lab {
+        width: 78vw;
+    height: 72vw;
+    }
+    h1 {
+        font-size: 5vw;
+    
+    }
+    #vezde{
+        font-size: 3.5vw;
+        padding-bottom: 20px;
+    }
+}
+
+/* @media only screen and (min-height:568px) {
+    .T,
+    .A,
+    .V {
+        width: 9vw;
+    height: 9vw;
+    }
+    #lab {
+        width: 78vw;
+    height: 72vw;
+    }
+    h1 {
+        font-size: 3vw;
+    
+    }
+    #vezde{
+        font-size: 2.5vw;
+        padding-bottom: 5px;
+    }
+} */

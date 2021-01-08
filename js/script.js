@@ -8,11 +8,10 @@ let map = [
 ];
 let map2 = map;
 
-const audioWin = document.getElementById('audioWin');
-const audioEmpate = document.getElementById('audioEmpate');
-const audioC1 = document.getElementById('audioC1');
-const audioC2 = document.getElementById('audioC2');
-const audioC3 = document.getElementById('audioC3');
+let click = document.getElementById('audioC2');
+let musicaTema = document.getElementById('audioTema');
+let audioWin = document.getElementById('audioWin');
+let audioEmpate = document.getElementById('audioEmpate');
 
 
 
@@ -31,7 +30,7 @@ function resetar() {
 function exibir_ganhador(vencedor) {
 
 
-    document.getElementById('audioWin').play()
+
 
 
 
@@ -63,16 +62,34 @@ function exibir_ganhador(vencedor) {
 
     var img = document.createElement('img');
 
-    img.style.width = '70vw';
-    img.style.marginTop = '20vw';
+    img.style.width = '35vw';
+    img.style.marginTop = '10vw';
     img.style.background = 'transparent'
 
     if (vencedor == "azul") {
         img.src = 'img/winblue.png';
+
+        // audios 
+        audioWin.currentTime = 0;
+        audioWin.play()
+        musicaTema.pause();
+        // audios 
     } else if (vencedor == "vermelho") {
         img.src = 'img/winred.png';
+
+        // audios 
+        audioWin.currentTime = 0;
+        audioWin.play()
+        musicaTema.pause();
+        // audios  
     } else {
         img.src = 'img/emp.png';
+
+        // audios 
+        audioEmpate.currentTime = 0;
+        audioEmpate.play()
+        musicaTema.pause();
+        // audios 
     }
     document.getElementById('resultado_div').appendChild(img);
 
@@ -91,6 +108,12 @@ function exibir_ganhador(vencedor) {
         document.body.appendChild(divNova)
         cria_jogo(map2)
 
+        // audios 
+        musicaTema.currentTime = 0;
+        musicaTema.play()
+        audioEmpate.pause()
+        audioWin.pause();
+        // audios 
     }
 
 }
@@ -196,8 +219,16 @@ function cria_jogo(map) {
 
             document.getElementById('lab').appendChild(torre).onclick = function () {
 
-                if (map[0][a] != 'T') {
+                click.currentTime = 0;
 
+                // audio 
+                click.play();
+                // audio 
+
+                if (map[0][a] != 'T') {
+                    // audio 
+                    click.pause();
+                    // audio 
                 } else {
 
                     par_ou_impar += 1;
@@ -217,13 +248,16 @@ function cria_jogo(map) {
                     for (let i = 0; i < 6; i++) {
 
                         if (map[i][a] != 'T') {
+
                             map[i - 1][a] = jogador;
 
                             break;
                         }
                         if (i == 5) {
                             map[i][a] = jogador;
+
                         }
+
                     }
 
                     document.getElementById("lab").remove();
