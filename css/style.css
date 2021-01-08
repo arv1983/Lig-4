@@ -12,13 +12,19 @@ body {
     text-align: center;
 }
 
+@keyframes expand {
+    from {
+        transform: scale(0);
+    }
+}
+
 .T {
     background-image: url("../img/backgroundBolaVazia.jpg");
     background-size: 100% auto;
     margin: 0.5vw;
     border: 0.5vw solid rgb(0, 0, 0);
     border-radius: 50%;
-    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%)
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
 }
 
 .V {
@@ -28,6 +34,7 @@ body {
     background-size: 100% auto;
     border-radius: 100%;
     box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
+    animation: expand .5s ease-in-out;
 }
 
 .A {
@@ -36,7 +43,8 @@ body {
     background-image: url("../img/bolaAzul.jpeg");
     background-size: 100% auto;
     border-radius: 100%;
-    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%)
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
+    animation: expand .5s ease-in-out;
 }
 
 .bola_vermelha {
