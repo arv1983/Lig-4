@@ -61,10 +61,9 @@ body {
 #lab {
     /* fundo da tabela */
     display: flex;
-   
     flex-wrap: wrap;
     background-image: url("../img/BackGroundTabuleiro.jpg");
-    background-size: 138%;
+    background-size: 173%;;
     margin: 0px auto;
     border: 3px solid black;
     border-radius: 3%;
@@ -145,12 +144,12 @@ h1 {
     .T,
     .A,
     .V {
-        width: 4.7vw;
-        height: 4.7vw;
+        width: 5.7vw;
+        height: 5.7vw;
     }
     #lab {
-        width: 47vw;
-        height: 40vw;
+        width: 54vw;
+        height: 46vw;
     }
     .bola_vermelha {
         width: 6vw;
@@ -159,12 +158,58 @@ h1 {
     #tit {
         margin-block-start: 0.47em;
         margin-block-end: 0.47em;
-        font-size: 1.3vw;
+        font-size: 2vw;
     }
     #vezde {
-        font-size: 1.3vw;
+        font-size: 1.7vw;
     }
 }
+@media only screen and (max-height: 823px) {
+    .T,
+    .A,
+    .V {
+        width: 5vw;
+    height: 5vw;
+    }
+    #lab {
+        width: 49vw;
+        height: 42vw;
+    }
+
+    
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 2vw;
+    }
+    #vezde {
+        font-size: 1.7vw;
+    }
+}
+@media only screen and (width: 720px) {
+    .T,
+    .A,
+    .V {
+        width: 7vw;
+        height: 7vw;
+    }
+    #lab {
+        width: 63vw;
+        height: 54vw;
+    }
+
+    
+    #tit {
+       
+        font-size: 2vw;
+    }
+    #vezde {
+        font-size: 1.5vw;
+        padding-bottom: 5px;
+    }
+   
+}
+
 
 
 /* Media query para: Desktop*/
@@ -195,17 +240,6 @@ h1 {
 }
 
 
-@media only screen and (width: 720px) {
-    #tit {
-        margin-block-start: 0.47em;
-        margin-block-end: 0.47em;
-        font-size: 2rem;
-    }
-    #vezde{
-        font-size: 1.5vw;
-        padding-bottom: 20px;
-    }
-}
 @media only screen and (width: 653px) {
     .T,
     .A,
@@ -241,7 +275,7 @@ h1 {
         width: 78vw;
     height: 72vw;
     }
-    h1 {
+    #tit {
         font-size: 5vw;
     
     }
@@ -251,23 +285,87 @@ h1 {
     }
 }
 
-/* @media only screen and (min-height:568px) {
+@media only screen and (width:812px) {
     .T,
     .A,
     .V {
-        width: 9vw;
-    height: 9vw;
+        width: 4.2vw;
+        height: 4.2vw;
     }
     #lab {
-        width: 78vw;
-    height: 72vw;
+        width: 43.5vw;
+    height: 37vw;
     }
-    h1 {
+   #tit {
+        font-size: 2vw;
+    
+    }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (width:1024px) {
+    .T,
+    .A,
+    .V {
+        width: 7vw;
+        height: 7vw;
+    }
+    #lab {
+        width: 63.2vw;
+        height: 61vw;
+    }
+    #tit {
         font-size: 3vw;
     
     }
     #vezde{
         font-size: 2.5vw;
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (width:1366px) {
+    .T,
+    .A,
+    .V {
+        width: 7vw;
+        height: 7vw;
+    }
+    #lab {
+        width: 63.2vw;
+        height: 61vw;
+    }
+    #tit {
+        font-size: 3vw;
+    
+    }
+    #vezde{
+        font-size: 2.5vw;
+        padding-bottom: 20px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 3000px){
+    .T,
+    .A,
+    .V {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+    #lab {
+        width: 53vw;
+        height: 45vw;
+    }
+    #tit {
+        font-size: 2vw;
+    
+    }
+    #vezde{
+        font-size: 1.7vw;
         padding-bottom: 5px;
     }
-} */
+
+}

@@ -8,11 +8,12 @@ let map = [
 ];
 let map2 = map;
 
+//audio
 let click = document.getElementById('audioC2');
 let musicaTema = document.getElementById('audioTema');
 let audioWin = document.getElementById('audioWin');
 let audioEmpate = document.getElementById('audioEmpate');
-
+//audio
 
 
 const buttonreset = document.getElementById("butreset")
@@ -265,7 +266,7 @@ function cria_jogo(map) {
                     var divNova = document.createElement("div");
                     divNova.setAttribute("id", 'lab');
 
-                    document.body.appendChild(divNova)
+                    document.body.appendChild(divNova);
 
                     //recria
                     cria_jogo(map);
