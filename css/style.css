@@ -373,8 +373,6 @@ h1 {
     }
 }
 
-=======
-}
 .debris {
     display: none;
     position: absolute;
@@ -385,6 +383,7 @@ h1 {
     overflow: hidden;
     border-radius: 8px;
 }
+
 .T .V .A {
     position: absolute;
     background-color: #ff0000;
@@ -395,12 +394,14 @@ h1 {
     border-radius: 8px;
     z-index: 9;
 }
+
 @keyframes expand {
     from {
         transform: scale(0);
         opacity: 0;
     }
 }
+
 .T {
     width: 9vw;
     height: 9vw;
@@ -410,6 +411,7 @@ h1 {
     border: 0.5vw solid rgb(0, 0, 0);
     border-radius: 50%;
 }
+
 .V {
     width: 9vw;
     height: 9vw;
@@ -421,6 +423,7 @@ h1 {
     box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
     animation: expand .5s ease-in-out;
 }
+
 .A {
     width: 9vw;
     height: 9vw;
@@ -432,7 +435,7 @@ h1 {
     box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
     animation: expand .5s ease-in-out;
 }
+
 .teste {
     width: 9vw;
 }
->>>>>>>anderson
