@@ -207,7 +207,9 @@ let par_ou_impar = 0;
 let jogador = 0;
 
 function cria_jogo(map) {
-
+    //audio
+    musicaTema.play();
+    //audio
     for (let i = 0; i < map.length; i++) {
 
         for (let a = 0; a < map[i].length; a++) {
