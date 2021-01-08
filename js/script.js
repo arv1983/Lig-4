@@ -8,6 +8,13 @@ let map = [
 ];
 let map2 = map;
 
+//audio
+let click = document.getElementById('audioC2');
+let musicaTema = document.getElementById('audioTema');
+let audioWin = document.getElementById('audioWin');
+let audioEmpate = document.getElementById('audioEmpate');
+//audio
+
 
 const buttonreset = document.getElementById("butreset")
 buttonreset.addEventListener("click", resetar)
@@ -22,6 +29,11 @@ function resetar() {
 
 
 function exibir_ganhador(vencedor) {
+
+
+
+
+
 
     const map2 = [
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
@@ -51,20 +63,44 @@ function exibir_ganhador(vencedor) {
 
     var img = document.createElement('img');
 
-    img.style.width = '70vw';
-    img.style.marginTop = '20vw';
+    img.style.width = '35vw';
+    img.style.marginTop = '10vw';
     img.style.background = 'transparent'
 
     if (vencedor == "azul") {
         img.src = 'img/winblue.png';
+
+        // audios 
+        audioWin.currentTime = 0;
+        audioWin.play()
+        musicaTema.pause();
+        // audios 
     } else if (vencedor == "vermelho") {
         img.src = 'img/winred.png';
+
+        // audios 
+        audioWin.currentTime = 0;
+        audioWin.play()
+        musicaTema.pause();
+        // audios  
     } else {
         img.src = 'img/emp.png';
+
+        // audios 
+        audioEmpate.currentTime = 0;
+        audioEmpate.play()
+        musicaTema.pause();
+        // audios 
     }
     document.getElementById('resultado_div').appendChild(img);
 
-    document.getElementById('resultado_div').onclick = function() {
+
+
+
+
+
+    document.getElementById('resultado_div').onclick = function () {
+
 
         document.getElementById("lab").remove();
         document.getElementById("resultado_div").remove();
@@ -73,6 +109,12 @@ function exibir_ganhador(vencedor) {
         document.body.appendChild(divNova)
         cria_jogo(map2)
 
+        // audios 
+        musicaTema.currentTime = 0;
+        musicaTema.play()
+        audioEmpate.pause()
+        audioWin.pause();
+        // audios 
     }
 
 }
@@ -165,6 +207,9 @@ let par_ou_impar = 0;
 let jogador = 0;
 
 function cria_jogo(map) {
+    //audio
+    musicaTema.play();
+    //audio
     for (let i = 0; i < map.length; i++) {
 
         for (let a = 0; a < map[i].length; a++) {
@@ -177,10 +222,18 @@ function cria_jogo(map) {
 
 
 
-            document.getElementById('lab').appendChild(torre).onclick = function() {
+            document.getElementById('lab').appendChild(torre).onclick = function () {
+
+                click.currentTime = 0;
+
+                // audio 
+                click.play();
+                // audio 
 
                 if (map[0][a] != 'T') {
-
+                    // audio 
+                    click.pause();
+                    // audio 
                 } else {
 
                     par_ou_impar += 1;
@@ -200,13 +253,16 @@ function cria_jogo(map) {
                     for (let i = 0; i < 6; i++) {
 
                         if (map[i][a] != 'T') {
+
                             map[i - 1][a] = jogador;
 
                             break;
                         }
                         if (i == 5) {
                             map[i][a] = jogador;
+
                         }
+
                     }
 
                     document.getElementById("lab").remove();
@@ -214,7 +270,7 @@ function cria_jogo(map) {
                     var divNova = document.createElement("div");
                     divNova.setAttribute("id", 'lab');
 
-                    document.body.appendChild(divNova)
+                    document.body.appendChild(divNova);
 
                     //recria
                     cria_jogo(map);

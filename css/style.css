@@ -1,5 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 html {
-    max-width: 200vw;
+    max-width: 100%;
 }
 
 body {
@@ -15,8 +19,6 @@ body {
 }
 
 .T {
-    width: 9vw;
-    height: 9vw;
     background-image: url("../img/backgroundBolaVazia.jpg");
     background-size: 100% auto;
     margin: 0.5vw;
@@ -26,8 +28,6 @@ body {
 }
 
 .V {
-    width: 9vw;
-    height: 9vw;
     margin: 0.5vw;
     border: 0.5vw solid rgb(0, 0, 0);
     background-image: url("../img/BolaVermelha.jpeg");
@@ -38,8 +38,6 @@ body {
 }
 
 .A {
-    width: 9vw;
-    height: 9vw;
     margin: 0.5vw;
     border: 0.5vw solid rgb(0, 0, 0);
     background-image: url("../img/bolaAzul.jpeg");
@@ -52,10 +50,9 @@ body {
 #lab {
     /* fundo da tabela */
     display: flex;
-    width: 77vw;
     flex-wrap: wrap;
     background-image: url("../img/BackGroundTabuleiro.jpg");
-    background-size: 138%;
+    background-size: 173%;;
     margin: 0px auto;
     border: 3px solid black;
     border-radius: 3%;
@@ -75,19 +72,34 @@ body {
 
 #vezde {
     font-family: monospace;
-    font-size: 2.5vw;
+   
     background-color: #000;
     color: rgb(228, 228, 228);
     text-shadow: 3px 16px 44px rgb(255 255 255 / 21%);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .jg1 {
     color: red;
 }
 
+/* TAMANHO bolinhas tabuleiro e textox e textos */
+.T,.A,.V{
+    width: 5vw;
+    height: 5vw;
+}
+#lab{
+    width: 49vw;
+    height: 42vw;
+}
+
+#vezde{
+    font-size: 1.3vw;
+}
+
+
 h1 {
-    font-size: 5vw;
+    font-size: 1.7vw;
 }
 
 .anima1 {
@@ -104,16 +116,41 @@ h1 {
 
 
 /* Media query para: Moto g4, Galaxy S5, Pixel 2,Pixel 2 xl,Ipad, Ipad Pro,Galaxy Fold */
+@media only screen and (max-height: 280px ){
 
+    .T,
+    .A,
+    .V {
+        width: 3.6vw;
+        height: 3.6vw;
+    }
+    #lab {
+        width: 39.3vw;
+        height: 33vw;
+    }
+    .bola_vermelha {
+        width: 6vw;
+        height: 6vw;
+    }
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 2vw;
+    }
+    #vezde {
+        font-size: 1.7vw;}
+
+}
 @media only screen and (max-height: 480px) {
     .T,
     .A,
     .V {
-        width: 6vw;
-        height: 6vw;
+        width: 5.7vw;
+        height: 5.7vw;
     }
     #lab {
-        width: 57vw;
+        width: 54vw;
+        height: 46vw;
     }
     .bola_vermelha {
         width: 6vw;
@@ -128,6 +165,52 @@ h1 {
         font-size: 1.7vw;
     }
 }
+@media only screen and (max-height: 823px) {
+    .T,
+    .A,
+    .V {
+        width: 5vw;
+    height: 5vw;
+    }
+    #lab {
+        width: 49vw;
+        height: 42vw;
+    }
+
+    
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 2vw;
+    }
+    #vezde {
+        font-size: 1.7vw;
+    }
+}
+@media only screen and (width: 720px) {
+    .T,
+    .A,
+    .V {
+        width: 7vw;
+        height: 7vw;
+    }
+    #lab {
+        width: 63vw;
+        height: 54vw;
+    }
+
+    
+    #tit {
+       
+        font-size: 2vw;
+    }
+    #vezde {
+        font-size: 1.5vw;
+        padding-bottom: 5px;
+    }
+   
+}
+
 
 
 /* Media query para: Desktop*/
@@ -149,5 +232,141 @@ h1 {
     #tit {
         margin-block-start: 0.47em;
         margin-block-end: 0.47em;
+        font-size: 2rem;
     }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 20px;
+    }
+}
+
+
+@media only screen and (width: 653px) {
+    .T,
+    .A,
+    .V {
+        width: 3.7vw;
+        height: 3.7vw;
+    }
+    #lab {
+        width: 40vw;
+        height: 35vw;
+    }
+    #tit {
+        margin-block-start: 0.47em;
+        margin-block-end: 0.47em;
+        font-size: 1.5vw;
+    }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 5px;
+    }
+
+}
+
+
+@media only screen and (min-height:568px) {
+    .T,
+    .A,
+    .V {
+        width: 9vw;
+    height: 9vw;
+    }
+    #lab {
+        width: 78vw;
+    height: 72vw;
+    }
+    #tit {
+        font-size: 5vw;
+    
+    }
+    #vezde{
+        font-size: 3.5vw;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (width:812px) {
+    .T,
+    .A,
+    .V {
+        width: 4.2vw;
+        height: 4.2vw;
+    }
+    #lab {
+        width: 43.5vw;
+    height: 37vw;
+    }
+   #tit {
+        font-size: 2vw;
+    
+    }
+    #vezde{
+        font-size: 1.5vw;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (width:1024px) {
+    .T,
+    .A,
+    .V {
+        width: 7vw;
+        height: 7vw;
+    }
+    #lab {
+        width: 63.2vw;
+        height: 61vw;
+    }
+    #tit {
+        font-size: 3vw;
+    
+    }
+    #vezde{
+        font-size: 2.5vw;
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (width:1366px) {
+    .T,
+    .A,
+    .V {
+        width: 7vw;
+        height: 7vw;
+    }
+    #lab {
+        width: 63.2vw;
+        height: 61vw;
+    }
+    #tit {
+        font-size: 3vw;
+    
+    }
+    #vezde{
+        font-size: 2.5vw;
+        padding-bottom: 20px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 3000px){
+    .T,
+    .A,
+    .V {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+    #lab {
+        width: 53vw;
+        height: 45vw;
+    }
+    #tit {
+        font-size: 2vw;
+    
+    }
+    #vezde{
+        font-size: 1.7vw;
+        padding-bottom: 5px;
+    }
+
 }
