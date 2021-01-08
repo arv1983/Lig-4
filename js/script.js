@@ -99,7 +99,7 @@ function exibir_ganhador(vencedor) {
 
 
 
-    document.getElementById('resultado_div').onclick = function () {
+    document.getElementById('resultado_div').onclick = function() {
 
 
         document.getElementById("lab").remove();
@@ -222,7 +222,7 @@ function cria_jogo(map) {
 
 
 
-            document.getElementById('lab').appendChild(torre).onclick = function () {
+            document.getElementById('lab').appendChild(torre).onclick = function() {
 
                 click.currentTime = 0;
 
