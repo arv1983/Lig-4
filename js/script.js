@@ -9,7 +9,7 @@ let map = [
 let map2 = map;
 ///// anderson
 //audio
-let click = document.getElementById('audioC2');
+let click = document.getElementById('audioC3');
 let musicaTema = document.getElementById('audioTema');
 let audioWin = document.getElementById('audioWin');
 let audioEmpate = document.getElementById('audioEmpate');
