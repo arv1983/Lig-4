@@ -351,6 +351,7 @@ h1 {
         font-size: 3vw;
     
     }
+<<<<<<< HEAD
     #vezde{
         font-size: 2.5vw;
         padding-bottom: 20px;
@@ -379,3 +380,73 @@ h1 {
     }
 
 }
+=======
+}
+
+.debris {
+    display: none;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: #ff00ff;
+    opacity: 1.0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.T .V .A {
+    position: absolute;
+    background-color: #ff0000;
+    left: 150px;
+    top: 150px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    z-index: 9;
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.T {
+    width: 9vw;
+    height: 9vw;
+    background-image: url("../img/backgroundBolaVazia.jpg");
+    background-size: 100% auto;
+    margin: 0.5vw;
+    border: 0.5vw solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.V {
+    width: 9vw;
+    height: 9vw;
+    margin: 0.5vw;
+    border: 0.5vw solid rgb(0, 0, 0);
+    background-image: url("../img/BolaVermelha.jpeg");
+    background-size: 100% auto;
+    border-radius: 100%;
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
+    animation: expand .5s ease-in-out;
+}
+
+.A {
+    width: 9vw;
+    height: 9vw;
+    margin: 0.5vw;
+    border: 0.5vw solid rgb(0, 0, 0);
+    background-image: url("../img/bolaAzul.jpeg");
+    background-size: 100% auto;
+    border-radius: 100%;
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
+    animation: expand .5s ease-in-out;
+}
+
+.teste {
+    width: 9vw;
+}
+>>>>>>> anderson

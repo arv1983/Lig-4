@@ -218,9 +218,7 @@ function cria_jogo(map) {
 
             torre.setAttribute("id", a);
 
-            torre.setAttribute("class", map[i][a], 'anima' + a);
-
-
+            torre.setAttribute("class", map[i][a]);
 
             document.getElementById('lab').appendChild(torre).onclick = function() {
 
@@ -230,6 +228,15 @@ function cria_jogo(map) {
                 click.play();
                 // audio 
 
+<<<<<<< HEAD
+                click.currentTime = 0;
+
+                // audio 
+                click.play();
+                // audio 
+
+=======
+>>>>>>> anderson
                 if (map[0][a] != 'T') {
                     // audio 
                     click.pause();
@@ -278,7 +285,6 @@ function cria_jogo(map) {
 
                 }
             };
-
 
         }
     }
