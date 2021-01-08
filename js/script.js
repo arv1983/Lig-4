@@ -23,11 +23,6 @@ function resetar() {
 
 function exibir_ganhador(vencedor) {
 
-
-
-
-
-
     const map2 = [
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
         ['T', 'T', 'T', 'T', 'T', 'T', 'T'],
@@ -127,7 +122,6 @@ function verifica_ganhador() {
             if (conta_v == 4) {
                 exibir_ganhador('vermelho');
             }
-
         }
     }
 
