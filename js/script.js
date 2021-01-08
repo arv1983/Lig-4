@@ -228,15 +228,6 @@ function cria_jogo(map) {
                 click.play();
                 // audio 
 
-<<<<<<< HEAD
-                click.currentTime = 0;
-
-                // audio 
-                click.play();
-                // audio 
-
-=======
->>>>>>> anderson
                 if (map[0][a] != 'T') {
                     // audio 
                     click.pause();
