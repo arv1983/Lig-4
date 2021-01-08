@@ -7,7 +7,7 @@ let map = [
     ['T', 'T', 'T', 'T', 'T', 'T', 'T']
 ];
 let map2 = map;
-
+///// anderson
 //audio
 let click = document.getElementById('audioC2');
 let musicaTema = document.getElementById('audioTema');
