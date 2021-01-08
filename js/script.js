@@ -173,7 +173,9 @@ function cria_jogo(map) {
 
             torre.setAttribute("id", a);
 
-            torre.setAttribute("class", map[i][a]);
+            torre.setAttribute("class", map[i][a], 'anima' + a);
+
+
 
             document.getElementById('lab').appendChild(torre).onclick = function() {
 
@@ -220,6 +222,7 @@ function cria_jogo(map) {
 
                 }
             };
+
 
         }
     }

@@ -49,17 +49,6 @@ body {
     animation: expand .5s ease-in-out;
 }
 
-.bola_vermelha {
-    width: 9vw;
-    height: 9vw;
-    border-radius: 100%;
-    border: 0.5vw solid rgb(61, 158, 16);
-}
-
-.bola {
-    background-color: tomato;
-}
-
 #lab {
     /* fundo da tabela */
     display: flex;
@@ -99,6 +88,18 @@ body {
 
 h1 {
     font-size: 5vw;
+}
+
+.anima1 {
+    width: 9vw;
+    height: 9vw;
+    margin: 0.5vw;
+    border: 0.5vw solid rgb(0, 0, 0);
+    background-image: url("../img/bolaAzul.jpeg");
+    background-size: 100% auto;
+    border-radius: 100%;
+    box-shadow: 0px 11px 100px rgb(255 255 255 / 82%);
+    animation: expand .5s ease-in-out;
 }
 
 
